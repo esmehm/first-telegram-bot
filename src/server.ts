@@ -29,7 +29,6 @@ bot.command('dog', async (ctx) => {
         if (!response.ok) {
             ctx.reply("Sorry that isn't a real breed, so here's a random dog for you")
             ctx.replyWithPhoto(await getRandomDog())
-            throw new Error('breed problem')
         }
         else {
             const body = await response.json()
